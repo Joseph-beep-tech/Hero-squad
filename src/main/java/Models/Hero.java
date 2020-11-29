@@ -27,4 +27,19 @@ import java.util.List;
             return id;
         }
 
+        public void setHeroesName(String heroesName){
+            this.heroesName = heroesName;
+        }
+
+        public void setSuperPower(String superPower){
+            this.superPower = superPower;
+        }
+
+        public void setWeakness(String weakness){
+            this.weakness = weakness;
+        }
+
+        public void setAge(int age){
+            this.age = age;
+        }
     }
