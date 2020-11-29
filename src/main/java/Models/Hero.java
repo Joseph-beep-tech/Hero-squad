@@ -47,5 +47,7 @@ import java.util.List;
             this.squadId = squadId;
         }
 
-
+        public String getHeroesName(){
+            return heroesName;
+        }
     }
