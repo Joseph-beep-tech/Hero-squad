@@ -58,4 +58,8 @@ import java.util.List;
         public String getWeakness(){
             return  weakness;
         }
+
+        public int getAge(){
+            return age;
+        }
     }
