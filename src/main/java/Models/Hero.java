@@ -55,5 +55,7 @@ import java.util.List;
             return superPower;
         }
 
-
+        public String getWeakness(){
+            return  weakness;
+        }
     }
