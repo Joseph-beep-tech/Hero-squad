@@ -12,6 +12,10 @@ import java.util.List;
         private int squadId;
 
         public Hero(String heroesName, int age, String superPower, String weakness, int squadId){
-
+            this.heroesName = heroesName;
+            this.age = age;
+            this.superPower = superPower;
+            this.weakness = weakness;
+            this.squadId = squadId;
         }
     }
