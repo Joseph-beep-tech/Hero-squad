@@ -28,4 +28,20 @@ public class Squad{
     public void setId(int id){
         this.id = id;
     }
+
+    public String getSquadName(){
+        return squadName;
+    }
+
+    public String getSquadMission(){
+        return squadMission;
+    }
+
+    public int getSquadVolume(){
+        return SquadVolume;
+    }
+
+    public int getId(){
+        return id;
+    }
 }
