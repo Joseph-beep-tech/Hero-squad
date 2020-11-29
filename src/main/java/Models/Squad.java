@@ -12,4 +12,12 @@ public class Squad{
         this.SquadVolume = squadVolume;
         this.id = id;
     }
+
+    public void setSquadName(String squadName){
+        this.squadName = squadName;
+    }
+
+    public void setSquadMission(String squadMission){
+        this.squadMission = squadMission;
+    }
 }
