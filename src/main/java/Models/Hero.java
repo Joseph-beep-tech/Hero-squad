@@ -50,4 +50,10 @@ import java.util.List;
         public String getHeroesName(){
             return heroesName;
         }
+
+        public String getSuperPower(){
+            return superPower;
+        }
+
+
     }
