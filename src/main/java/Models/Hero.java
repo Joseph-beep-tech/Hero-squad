@@ -42,4 +42,10 @@ import java.util.List;
         public void setAge(int age){
             this.age = age;
         }
+
+        public void setSquadId(int squadId){
+            this.squadId = squadId;
+        }
+
+
     }
