@@ -20,4 +20,12 @@ public class HeroTest{
     public void getSuperPower(){
         assertEquals ("x-ray vision", one.getSuperPower ());
     }
+
+    @Test
+    public void getWeakness(){
+        assertEquals ("kryptonite", one.getWeakness ());
+    }
+
+    @Test
+    public void getSquadId(){}
 }
