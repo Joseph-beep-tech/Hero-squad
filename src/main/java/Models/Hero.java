@@ -18,4 +18,13 @@ import java.util.List;
             this.weakness = weakness;
             this.squadId = squadId;
         }
+
+        public void setId(int id){
+            this.id = id;
+        }
+
+        public int getId(){
+            return id;
+        }
+
     }
