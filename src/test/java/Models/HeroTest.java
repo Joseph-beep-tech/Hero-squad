@@ -27,5 +27,7 @@ public class HeroTest{
     }
 
     @Test
-    public void getSquadId(){}
+    public void getSquadId(){
+        assertEquals (3, one.getSquadId ());
+    }
 }
