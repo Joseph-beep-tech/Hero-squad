@@ -15,4 +15,14 @@ public class SquadTest{
     public void getSquadMission(){
         assertEquals("protect gotham", playSquad.getSquadMission ());
     }
+
+    @Test
+    public void getSquadVolume(){
+        assertEquals (4, playSquad.getSquadVolume ());
+    }
+
+    @Test
+    public void getId(){
+        assertEquals (2, playSquad.getId ());
+    }
 }
