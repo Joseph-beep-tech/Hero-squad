@@ -15,4 +15,9 @@ public class HeroTest{
     public void setAge(){
         assertEquals (30, one.getAge ());
     }
+
+    @Test
+    public void getSuperPower(){
+        assertEquals ("x-ray vision", one.getSuperPower ());
+    }
 }
