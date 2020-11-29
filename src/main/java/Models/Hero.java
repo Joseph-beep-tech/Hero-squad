@@ -62,4 +62,8 @@ import java.util.List;
         public int getAge(){
             return age;
         }
+
+        public int getSquadId(){
+            return squadId;
+        }
     }
