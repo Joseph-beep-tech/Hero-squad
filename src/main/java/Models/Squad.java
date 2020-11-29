@@ -20,4 +20,12 @@ public class Squad{
     public void setSquadMission(String squadMission){
         this.squadMission = squadMission;
     }
+
+    public void setSquadVolume(int squadVolume){
+        this.SquadVolume = squadVolume;
+    }
+
+    public void setId(int id){
+        this.id = id;
+    }
 }
