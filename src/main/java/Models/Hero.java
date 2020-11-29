@@ -10,4 +10,8 @@ import java.util.List;
         private int age;
         private int id;
         private int squadId;
+
+        public Hero(String heroesName, int age, String superPower, String weakness, int squadId){
+
+        }
     }
