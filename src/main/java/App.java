@@ -28,7 +28,6 @@ public class App {
         port(getHerokuAssignedPort());
         staticFileLocation("/public");
 
-        String connectionString = "jdbc:postgresql://localhost:5432/hero";
         Map<String, Object> model = new HashMap<>();
 
         get("/", (request, response) -> {
@@ -42,7 +41,7 @@ public class App {
 
         post("/add-hero",(req,res)->{
             String name = req.queryParams("name");
-            String power = req.queryParams("power");
+            String power = req.queryParams("superpower");
             String weakness = req.queryParams("weakness");
             int age = Integer.parseInt(req.queryParams("age"));
             int squadId = Integer.parseInt(req.queryParams("squad"));
@@ -58,8 +57,8 @@ public class App {
 
         post("/add-squad", (req, res) -> {
             String name = req.queryParams("name");
-            String cause = req.queryParams("cause");
-            int size = Integer.parseInt(req.queryParams("size"));
+            String cause = req.queryParams("volume");
+            int size = Integer.parseInt(req.queryParams("volume"));
             Squad anotherSquad = new Squad(name, cause, size);
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
@@ -76,29 +75,29 @@ public class App {
             return new ModelAndView(model, "squad-details.hbs");
         }, new HandlebarsTemplateEngine());
 
-        get("/delete-hero/:id", (req, res) -> {
+        get("/remove-hero/:id", (req, res) -> {
             int id = Integer.parseInt(req.params("id"));
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
-        get("/delete-squad/:id", (req, res) -> {
+        get("/remove-squad/:id", (req, res) -> {
             int id = Integer.parseInt(req.params("id"));
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
-        get("/edit-squad/:id", (req, res) -> {
+        get("/modify-squad/:id", (req, res) -> {
             int id = Integer.parseInt(req.params("id"));
             model.put("editHero", true);
             return new ModelAndView(model, "squad.hbs");
         }, new HandlebarsTemplateEngine());
 
-        get("/edit-hero/:id", (req, res) -> {
+        get("/modify-hero/:id", (req, res) -> {
             int id = Integer.parseInt(req.params("id"));
-            model.put("editHero", true);
+            model.put("modifyHero", true);
             return new ModelAndView(model, "hero-form.hbs");
         }, new HandlebarsTemplateEngine());
 
-        post("/edit-hero/:id", (req, res) -> {
+        post("/modify-hero/:id", (req, res) -> {
             int id = Integer.parseInt(req.params("id"));
             String name = req.queryParams("name");
             String power = req.queryParams("power");
@@ -108,11 +107,11 @@ public class App {
             return new ModelAndView(model, "hero-details.hbs");
         }, new HandlebarsTemplateEngine());
 
-        post("/edit-squad/:id", (req, res) -> {
+        post("/modify-squad/:id", (req, res) -> {
             int id = Integer.parseInt(req.params("id"));
             String name = req.queryParams("name");
-            String cause = req.queryParams("power");
-            int size = Integer.parseInt(req.queryParams("size"));
+            String mission = req.queryParams("power");
+            int size = Integer.parseInt(req.queryParams("volume"));
             return new ModelAndView(model, "hero-details.hbs");
         }, new HandlebarsTemplateEngine());
     }
