@@ -13,6 +13,9 @@ public class Squad{
         this.id = id;
     }
 
+    public Squad(String name, String cause, int size) {
+    }
+
     public void setSquadName(String squadName){
         this.squadName = squadName;
     }
