@@ -1,35 +1,13 @@
 {{#partial "content"}}
-    <div class="something">
-    <div class="row styling">
-        {{#if squads}}
-        <div class="card-deck col">
-            <div class="card">
-                {{#each squads}}
-                    <div class="card-body">
-                        <h5 class="card-title">{{squadName}}</h5>
-                        <p class="card-text">{{squadCause}}</p>
-                        <p class="card-footer"><a href="/squads/{{id}}" class="btn btn-primary">Squad Details</a></p>
-                        <p class="card-text"></p>
-                    </div>
-                {{/each}}
-            </div>
-        {{/if}}
-    </div>
-        <div class="card-deck col">
-            {{#if heroes}}
-                <div class="card">
-                    {{#each heroes}}
-                        <div class="card-body">
-                            <h5 class="card-title">{{heroesName}}</h5>
-                            <p class="card-text">{{superPower}}</p>
-                            <p class="card-footer"><a href="/heroes/{{id}}" class="btn btn-primary">Hero Credentials</a></p>
-                            <p class="card-text"></p>
-                        </div>
-                    {{/each}}
-                </div>
-            {{/if}}
+    <section class="landing-page">
+        <div class="land-left">
         </div>
-    </div>
-</div>
+        <div class="land-right">
+        </div>
+        <div class="hero-desc">
+            <h3>Super Heroes</h3>
+            <a href="/hero-form"><button class="hero-btn buttons">Create Your Hero</button></a>
+        </div>
+    </section>
 {{/partial}}
 {{> layout.hbs}}

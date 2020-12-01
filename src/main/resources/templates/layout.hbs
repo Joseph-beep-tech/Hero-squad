@@ -1,67 +1,40 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>{{#block "title"}}Hero{{/block}}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Hero Squad</title>
 </head>
-<body class="nav">
-<div class="text-blue">
-    <nav class="navbar navbar-expand-lg navbar text-white">
-        <a class="navbar-brand" href="/">Hero App</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-lg text-white">
+        <a class="navbar-brand" href="/"><h3><strong><b>HERO SQUAD</b></strong></h3></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">
-                        Heroes
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/">Hero</a>
-                        {{#if squads}}
-                            <a class="dropdown-item" href="/add-hero">Add Hero</a>
-                        {{/if}}
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">
-                        Hero Squad
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/">Squad</a>
-                        <a class="dropdown-item" href="/add-squad">Add Squad</a>
-                    </div>
-                </li>
-            </ul>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav float-right mr-4">
+                <a class="nav-item nav-link" href="/hero">Hero</a>
+                <a class="nav-item nav-link" href="/squad">Squad</a>
+            </div>
         </div>
     </nav>
 </div>
-<div class="container">
-    <div class="page-header">
 
-        <h1 class="text-white">Hero Squad</h1>
-    </div>
+{{#block "content"}}
 
-    <div class="col-md-12">
-        {{#block "content"}}
-        {{/block}}
-
-    </div>
-</div>
-{{#block "footer"}}
-    </body>
-    </html>
 {{/block}}
+
+{{#block "footer"}}
+{{/block}}
+<script src="/js/jquery-3.4.0.min.js"></script>
+<script src="/js/script.js"></script>
+</body>
+</html>
